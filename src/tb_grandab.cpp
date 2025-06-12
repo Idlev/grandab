@@ -126,6 +126,8 @@ CCS_MAIN(int argc, char *argv[])
 
     }//run_count
 
+    std::cout << "done" << std::endl;
+
     fclose(outFile);
     CCS_RETURN(0); 
 }
