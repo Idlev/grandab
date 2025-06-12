@@ -26,9 +26,6 @@ go new
 go analyze
 solution design set decoder_class -top
 go compile
-solution design set decoder_ccore_peripherals::run -combinational
-solution design set decoder_ccore_ushift::ushift -combinational
-solution design set decoder_ccore_cshift::cshift -combinational
 solution library add mgc_Xilinx-VIRTEX-uplus-2L_beh -- -rtlsyntool Vivado -manufacturer Xilinx -family VIRTEX-uplus -speed -2L -part xcvu9p-flga2104-2L-e
 go libraries
 solution design set decoder_ccore_peripherals::run -combinational
@@ -38,6 +35,7 @@ directive set -CLOCKS {clk {-CLOCK_PERIOD 10.0 -CLOCK_EDGE rising -CLOCK_UNCERTA
 
 #Architectural constraints
 go assembly
+directive set /decoder_class/run/PRC -CSTEPS_FROM {{. == 1}}
 directive set /decoder_class -EFFORT_LEVEL high
 
 #Generate RTL
