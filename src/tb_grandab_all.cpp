@@ -33,10 +33,8 @@ CCS_MAIN(int argc, char *argv[])
     decoder_class DUT;                  //DUT instance
     ac_channel<inStruct_t> dataIn_ch;   //Channels
     ac_channel<decoder_n_t> dataOut_ch;
-    ac_channel<decoder_m_t> scDebug_ch;
     inStruct_t data_in;                 //Channel data
     decoder_n_t data_out;
-    decoder_m_t sc_data_out;
 
     //Golden ref
     ref_decoder decoder_inst;
