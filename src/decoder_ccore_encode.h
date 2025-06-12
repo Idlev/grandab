@@ -1,4 +1,6 @@
 //
+// Author: Tuomas Aaltonen - tuomas.aaltonen@tuni.fi
+//
 // Prioriy encoder module for GRANDAB3
 //
 

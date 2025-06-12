@@ -1,6 +1,8 @@
 //
-// Recursive template search for GRANDAB decoder
-// Maintains priority of parallel encoder outputs
+// Author: Tuomas Aaltonen - tuomas.aaltonen@tuni.fi
+//
+// High-Level Synthesis Blue Book style
+// Balanced recursive template search for P encoders
 //
 
 #ifndef SEARCH_H
