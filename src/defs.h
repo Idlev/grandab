@@ -1,4 +1,6 @@
 //
+// Author: Tuomas Aaltonen - tuomas.aaltonen@tuni.fi 
+//
 // Bit-accurate datatypes
 // System parameters
 //
@@ -38,13 +40,8 @@ typedef ac_int<M,false> decoder_m_t;        //Bit-accurate syndrome type
 
 typedef ac_int<ac::log2_ceil<N>::val, false> decoder_idx_t;  //N-indexing
 
-//Toggle between parallel and baseline implementation (P=1/P>1)
-#define PARALLEL
-#ifndef PARALLEL
-    typedef ac_int<1,false> pid_type_t; //P=1
-#else
-    typedef ac_int<ac::log2_ceil<P>::val, false> pid_type_t; //P>1
-#endif
+const int WIDTH = (P==1 ? 1 : ac::log2_ceil<P>::val); //P-encoder id
+typedef ac_int<WIDTH, false> pid_type_t; 
 
 //Input channel array type
 struct inStruct_t
