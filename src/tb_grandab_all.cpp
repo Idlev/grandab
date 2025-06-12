@@ -125,8 +125,8 @@ CCS_MAIN(int argc, char *argv[])
     for(int i=0; i<N; i++)
     {
         if(dec[i] != data_out[i]){
-            std::cout << "incorrect bit!: " << i << std::endl;
-			fprintf(outFile, "Incorrect bit: %d \n",i);
+            std::cout << "mismatch bit!: " << i << std::endl;
+			fprintf(outFile, "mismatch bit: %d \n",i);
         }
     }
 
@@ -201,8 +201,8 @@ CCS_MAIN(int argc, char *argv[])
     for(int i=0; i<N; i++)
     {
         if(dec[i] != data_out[i]){
-            std::cout << "incorrect bit!: " << i << std::endl;
-			fprintf(outFile, "Incorrect bit: %d \n",i);
+            std::cout << "mismatch bit!: " << i << std::endl;
+			fprintf(outFile, "mismatch bit: %d \n",i);
         }
     }
 
